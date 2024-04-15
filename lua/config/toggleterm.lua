@@ -11,28 +11,20 @@ for option, value in pairs(powershell_options) do
   vim.opt[option] = value
 end
 
-require("toggleterm").setup{
-  size = 20,
-  open_mapping = [[<c-\>]],
+local status, toggleterm = pcall(require, 'toggleterm')
+if (not status) then return end
+
+toggleterm.setup({
+  size = 40,
+  open_mapping = [[<C-\>]],
   hide_numbers = true,
-  shade_filetypes = {},
-  autochdir = true,
   shade_terminals = true,
   start_in_insert = true,
   insert_mappings = true,
-  terminal_mappings = true,
   persist_size = true,
-  persist_mode = true,
-  direction = 'float',
   close_on_exit = true,
-  shell = vim.o.shell,
-  auto_scroll = true,
+  direction = 'float',
   float_opts = {
-    border = 'curved',
-    winblend = 0,
-    highlights = {
-      border = "Normal",
-      background = "Normal",
-    },
-  },
-}
+    border = "curve",
+  }
+})
