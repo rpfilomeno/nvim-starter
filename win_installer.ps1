@@ -4,14 +4,29 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 # Install chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+# Install  git
+choco install git -y
+
 # Nodejs
 choco install nodejs -y
 
 # Install ripgrep
 choco install ripgrep -y
 
+# Install fd-find
+choco install fd -y
+
+# Install gzip
+choco install gzip -y
+
+# Install tree-sitter binary
+choco install tree-sitter -y
+
 # Install universal-ctags
 choco install universal-ctags -y
+
+# Install sipport node js
+npm install -g neovim
 
 # Install vim-language-server
 npm install -g vim-language-server
@@ -32,7 +47,7 @@ pip install -U pynvim
 pip install 'python-lsp-server[all]' pylsp-mypy python-lsp-isort
 
 # Neovim
-choco install neovim -y
+choco install neovim --pre -y
 
 # backup
 Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.bak
