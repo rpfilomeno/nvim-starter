@@ -1,13 +1,12 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.coding.codeium",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.python",
-    "lazyvim.plugins.extras.lang.python-semshi",
     "lazyvim.plugins.extras.util.dot"
   ],
   "news": {
-    "NEWS.md": "2191"
+    "NEWS.md": "3415"
   },
-  "version": 2
+  "version": 3
 }
