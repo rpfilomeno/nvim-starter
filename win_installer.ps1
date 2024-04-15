@@ -16,6 +16,13 @@ choco install ripgrep -y
 # Install fd-find
 choco install fd -y
 
+# Install fuzzy-find
+choco install fzf -y
+
+# bes cd replacement
+choco install zoxide -y
+Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })
+
 # Install gzip
 choco install gzip -y
 
