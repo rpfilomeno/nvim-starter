@@ -51,7 +51,7 @@ python.exe -m pip install --upgrade pip
 pip install -U pynvim
 
 # Install python-language-server
-pip install 'python-lsp-server[all]' pylsp-mypy python-lsp-isort
+pip install 'python-lsp-server[all]' pylsp-mypy python-lsp-isort ruff-lsp pyright
 
 # Neovim
 choco install neovim --pre -y
